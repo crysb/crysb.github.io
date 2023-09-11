@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!-- fonts API -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+	<!-- bootstrap CDN CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<!-- leaflet map -->
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css"
+   integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ=="
+   crossorigin=""/>
+   <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log=="crossorigin=""></script>
+	<!-- personal stylesheet -->
+	<link rel="stylesheet" href="style.css" />
+	<title>Crystal Bae | UChicago | UCSB</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Crystal Bae, Asst. Instructional Professor at the University of Chicago">
+    <meta name="author" content="Crystal Bae">
+</head>
+
+<body>
+	<header class="header">
+		<div class="container">
+			<div class="row" id="home">
+				<div class="col-xs-12 col-md-12">
+					<h1>Crystal Bae</h1>
+					<h2>cbae@uchicago.edu</h2>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class="main">
+		<div class="container">
+			<div class="row">
+				<div class="menu" id="menu">
+					<a href="#home">Home</a>
+					<a href="#academic">Academic</a>
+					<a href="#teaching">Teaching</a>
+					<a href="#personal">Personal</a>
+					<a href="CBae_CV_Sept2023.pdf">Curriculum Vitae</a>
+				</div>
+			</div>
+			<div class="row" id="topinfo"> <!-- Personal summary short -->
+				<div class="col-xs-12 col-md-12">
+					<p><br />Dr. Crystal Bae is Assistant Instructional Professor of Geographic Information Science in the <a href="https://spatial.uchicago.edu/">Center for Spatial Data Science</a> at the University of Chicago since 2021. She holds a Ph.D. in Geography from the University of California, Santa Barbara and was formerly a Postdoctoral Researcher working with Somayeh Dodge in the <a href="http://move.geog.ucsb.edu/">MOVE Lab</a> on Geographic Visualization and Spatial Cognition. Her research interests are in the areas of spatial cognition, wayfinding and navigation, geovisualization, travel behavior and mobility, and the urban built environment.</p>
+				</div>
+			</div>
+			<div class="row" align="center"> <!-- Leaflet map -->
+				<div class="col-xs-12 col-md-12">
+				<p />
+				<div id="mapid" style="width: 800px; height: 400px;"></div>
+					<script>
+					var mymap = L.map('mapid').setView([38.816,-97.585], 3.5);
+					L.tileLayer('https://api.mapbox.com/styles/v1/crysb/cj98nbm481ohy2ss222hgb4f8/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiY3J5c2IiLCJhIjoiaUFWM3ZxRSJ9.xjwgAGdQJ1ZEjc1rmNKHgQ', {maxZoom: 18, attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' + '<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' + 'Imagery © <a href="http://mapbox.com">Mapbox</a>'
+				}).addTo(mymap);
+					var marker = L.marker([41.833,-88.012]).addTo(mymap).bindPopup("<b>Chicago, IL</b><br>My current location.").openPopup();
+					var marker = L.marker([34.421,-119.698]).addTo(mymap).bindPopup("<b>Santa Barbara, CA</b><br>For graduate school and postdoc.");
+					var marker = L.marker([38.89,-77.01]).addTo(mymap).bindPopup("<b>Washington, DC</b><br>My hometown.");
+					var marker = L.marker([37.560,126.988]).addTo(mymap).bindPopup("<b>Seoul, South Korea</b><br>I was born here some time ago.");
+					</script>
+			</div>
+			<div class="row" id="academic" align="left"> <!-- Academic section -->
+				<div class="col-xs-12 col-md-12">
+					<h3>Academic<h3>
+				</div>
+			</div>
+			<div class="row" align="left">
+				<div class="col-xs-12 col-md-12">
+					<p>For an updated list of publications and projects, refer to Dr. Bae's <a href="CBae_CV_Sept2023.pdf">Curriculum Vitae</a> or get in touch by email.</p>
+					<p><strong>Geographic visualization of movement patterns and interaction</strong><br/>
+					Evaluating the cognition of movement behavior through static and animated geographic visualizations, to compare spatio-temporal visualization methods for mapping movement patterns and interaction between individuals.
+					This work is with Somayeh Dodge and Evgeny Noi on the NSF-funded project “Visualizing Motion: A Framework for the Cartography of Movement”.<br/>
+					Publication: Dodge, S., Toka, M., & Bae, C. J. (2021). DynamoVis 1.0: an exploratory data visualization software for mapping movement in relation to internal and external factors. <em>Movement Ecology</em>, 9:55: 218–240. [<a href="https://movementecologyjournal.biomedcentral.com/articles/10.1186/s40462-021-00291-5">link</a>]</p> <!--doi: 10.1186/s40462-021-00291-5-->
+					<p><strong>Collaborative wayfinding in real-world environments</strong><br/>
+					Behavioral study of dyads performing a situated navigation task, employing Conversation Analytic (CA) methods for video-recordings of planning and navigation processes.<br/>
+					Publication: Bae, C. J. & Montello, D. R. (2019). Dyadic Route Planning and Navigation in Collaborative Wayfinding. <em>14th International Conference on Spatial Information Theory (COSIT 2019)</em>. [<a href="http://drops.dagstuhl.de/opus/volltexte/2019/11116/pdf/LIPIcs-COSIT-2019-24.pdf">link</a>]<br/>
+					Conversation Analysis work "Suggestion Sequences during Route Planning" [<a href="http://ceur-ws.org/Vol-2455/paper7.pdf">link</a>] also presented as Workshop Paper at the Conference on Spatial Information Theory (COSIT) in September 2019.<br/>
+					Preliminary results discussed at the Interdisciplinary Navigation Symposium (iNAV) in June 2018, and at Spatial Cognition conference in September 2018 (poster available on <a href="https://osf.io/bs5ug/">Open Science Framework</a>).</p>
+					<p><strong>Cognitive boundaries of urban neighborhoods</strong><br />
+					Project surveying residents in Koreatown, Los Angeles to measure variation in cognitive boundaries of the neighborhood, with a focus on spatial representations, ethnic identity, transportation, and activity spaces.<br/>
+					Publication: Bae, C. J. & Montello, D. R. (2018). Representations of an Urban Ethnic Neighbourhood: Residents' Cognitive Boundaries of Koreatown, Los Angeles. <em>Built Environment</em>, 44(2), 218-240. [<a href="https://www.ingentaconnect.com/contentone/alex/benv/2018/00000044/00000002/art00008">link</a>]<br/>
+					Thesis: "Representations of an Urban Neighborhood: Residents’ Cognitive Boundaries of Koreatown, Los Angeles" [<a href="https://search.proquest.com/docview/1731941654">link</a>]</p>
+					<h1 align="center">
+					<img src="img/Koreatown.png" width=360> <img src="img/CollabNav.png" width=360> <img src="img/CultCog.png" width=360>
+					</h1>
+				</div>
+			</div>
+			<div class="row" id="teaching" align="left"> <!-- Teaching section -->
+				<div class="col-xs-12 col-md-12">
+					<h3>Teaching<h3>
+				</div>
+			</div>
+			<div class="row" align="left">
+				<div class="col-xs-12 col-md-12">
+					<p>For the most up-to-date teaching history, refer to Dr. Bae's CV: <a href="CBae_CV_Sept2023.pdf">Curriculum Vitae</a></p>
+					<p><strong>Certifications and Recognition:</strong><br/>
+					Certificate in College and University Teaching (CCUT), <em>awarded Winter 2020</em><br/>
+					Designed ArcGIS Online labs for Urban Geography course at UCSB, published in <em>ArcUser</em> as "ArcGIS Online Simplifies Lab Lessons" [<a href="https://www.esri.com/about/newsroom/wp-content/uploads/2020/02/agolabs.pdf">link</a>], <em>Winter 2020</em><br/>
+					Summer Teaching Institute for Associates (STIA) Certificate, <em>completed Summer 2015</em><br/>
+					UCSB Geography Excellence in Teaching Award, <em>awarded Spring 2016</em>
+				</p>
+					<p><strong>As Assistant Instructional Professor at UChicago:</strong><br/>
+					patial Cognition, <em>Spring 2022</em><br/>
+					Introduction to GIS & Spatial Analysis, <em>Spring 2022</em><br/>
+					Cartographic Design and Geovisualization, <em>Winter 2022</em><br/>
+					Social Science Inquiry: Spatial Analysis II, <em>Winter 2022</em><br/>
+					Geographic Information Science I, <em>Autumn 2021</em></p>
+					<p><strong>As Instructor of Record at UC Santa Barbara:</strong><br/>
+					Urban Geography, Upper Division Course, <em>Fall 2016</em><br/>
+					People, Places, and Environment (Introduction to Human Geography), Lower Division, <em>Fall 2015</em><br/>
+					Behavioral Geography, Upper Division, <em>Summer 2015</em></p>
+					<p><strong>As Teaching Associate (TA):</strong><br />
+					Maps and Spatial Reasoning<br/>
+					Scientific Research Methods in Geography<br/>
+					Urban Geography<br/>
+					People, Places, and Environment<br/>
+					Geography of the United States</br>
+					Environmental Perception and Cognition<br/>
+					Technical Issues in Geographic Information Systems
+					</p>
+				</div>
+			</div>
+
+			<div class="row" id="personal" align="left"> <!-- Personal section -->
+				<div class="col-xs-12 col-md-12">
+					<h3>Personal<h3>
+				</div>
+			</div>
+			<div class="row" align="left">
+				<div class="col-xs-12 col-md-12">
+					<p><strong>KCSB Community Radio:</strong><br/>
+					Hosted a world music show on 91.9 KCSB-FM in Santa Barbara called <em>The Subverse</em> (Summer 2018 and 2019), featuring various sub-genres of music weekly. You can find my <a href="https://spinitron.com/KCSB/dj/131058/C-Bae">playlists on Spinitron</a>. Also co-hosted a regional jazz music show called <em>Footprints of Giant Steps</em> for several quarters.</p>
+					<p><strong>Travel Blog:</strong><br/>
+					Wrote a blog called <em>Aesthetics of Everywhere</em> sharing travel narratives, including my cross-country bicycle tour in the summer of 2013 and solo explorations around Southeast Asia in the summer of 2010.</p>
+					<p><strong>Other Interests:</strong><br/>
+					My main interests outside of academia include drumming, bicycling and bike touring, hiking and backpacking, modern and postmodern literature, poetry, photography, and urbanism.<br/>
+					<h1 align="center">
+					<img src="img/small1.jpeg">
+					<img src="img/small2.jpeg">
+					<img src="img/small3.jpeg">
+					<img src="img/small4.jpeg">
+					<img src="img/small5.jpeg">
+					<img src="img/small6.jpeg">
+					<img src="img/small7.jpeg">
+					</h1>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+	<script src="script.js"></script>
+
+</body>
+
+</html>

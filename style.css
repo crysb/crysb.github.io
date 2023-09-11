@@ -1,0 +1,107 @@
+
+html, body {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 20px;
+}
+
+h1 {
+	font-size: 36px;
+	font-weight: 400;
+}
+
+h2 {
+	border-left: 2px solid #339999;
+	font-size: 24px;
+	font-weight: 400;
+	padding-left: 20px;
+}
+
+h3 {
+	background-color: #006666;
+	color: #fff;
+	border-left: 2px solid #006666;
+	font-size: 20px;
+	font-weight: 400;
+	padding-left: 20px;
+}
+
+p {
+	border-left: 2px solid #006666;
+	font-size: 20px;
+	font-weight: 400;
+	padding-left: 20px;
+}
+
+.menu {
+	margin: 0;
+	padding: 0;
+    background-color: #006666;
+    overflow: hidden;
+}
+
+.menu a {
+	padding-left: 20px;
+	padding-right: 20px;
+	color: #fff;
+	text-align: center;
+    text-decoration: none;
+
+	transition: background .3s;
+}
+
+.menu a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+form input {
+	background: #f0f0f0;
+	margin-top: 16px;
+	border: none;
+	border-left: 2px solid #fff;
+	font-size: 20px;
+	padding: 16px;
+	width: 100%;
+
+	transition: background 2s, border-left 2s;
+}
+
+form input:focus {
+	background: #fff;
+	border-left: 2px solid #000;
+	box-shadow: none;
+	outline: none;
+}
+
+.main {
+	margin-top: 50px;
+}
+
+button.btn {
+	background: transparent;
+	margin-top: 10px;
+	border: none;
+	color: #006666;
+	cursor: pointer;
+	font-size: 24px;
+	padding: 20px 20px;
+	transition: background 2s, color 2s;
+}
+
+button.btn:hover {
+	background: #006666;
+	color: #fff;
+}
+
+.comments {
+	margin-top: 20px;
+	list-style: none;
+	padding-left: 0px;
+}
+
+li {
+	padding-left: 20px;
+	border-left: 2px dotted #339999;
+	font-size: 20px;
+	margin: 0 0 30px;
+}
